@@ -1,102 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>V2EX</title><link>https://www.v2ex.com/</link><description>way to explore</description><lastBuildDate>Fri, 01 Dec 2023 07:15:32 GMT</lastBuildDate><generator>rfeed v1.1.1</generator><docs>https://github.com/svpino/rfeed/blob/master/README.md</docs><item><title>[宽带症候群] 光猫桥接限速？</title><link>https://www.v2ex.com/t/996868#reply0</link><description>&lt;p&gt;自己搞了个联通的中兴 G7615 光猫，换掉原来的光猫用旧 loid 注册了一下新建个 wan 连接就能用了，用路由模式一切正常，改成桥接以后下载速度就只有 40+Mbps 了，简直离谱，旧光猫桥接正常用的，我把光猫的防火墙跟 QOS 都关了，直接新建一个桥接的连接也是一样，下载速度死活上不去，是限速了还是别的什么原因导致的？该怎么排查原因？&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 07:15:12 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996868#reply0</guid></item><item><title>[Alfred] 分享一个自己开发的 WorkFlow</title><link>https://www.v2ex.com/t/996867#reply0</link><description>&lt;p&gt;仓库地址： &lt;a href="https://github.com/alfred-workflow-collections/jetbrains" rel="nofollow"&gt;https://github.com/alfred-workflow-collections/jetbrains&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;使用 Alfred 快速打开 JetBrains 的项目&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本项目是基于&lt;a href="https://www.alfredapp.com/" rel="nofollow"&gt;Alfred&lt;/a&gt;和&lt;a href="https://www.jetbrains.com/" rel="nofollow"&gt;JetBrains&lt;/a&gt;开发的快速打开项目的 workflow ，目前只支持 MacOS 系统。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;通过验证的版本：Alfred 5.x ，IDE 2023.x&lt;/p&gt;
-&lt;/blockquote&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>V2EX</title><link>https://www.v2ex.com/</link><description>way to explore</description><lastBuildDate>Sat, 02 Dec 2023 04:26:25 GMT</lastBuildDate><generator>rfeed v1.1.1</generator><docs>https://github.com/svpino/rfeed/blob/master/README.md</docs><item><title>[Windows] 为什么你应该使用安卓和 Windows？</title><link>https://www.v2ex.com/t/997060#reply0</link><description>&lt;p&gt;说明：这是一篇极其主观和片面的，赞扬安卓和 Windows 的文章。如果你是资深果粉，请马上离开，因为内容可以会引起你的不适。&lt;/p&gt;
+&lt;p&gt;原因：大概一个月前，我开始回到 Windows ，最近重度使用 Windows 。并且最近尝试了安卓手机。&lt;/p&gt;
+&lt;p&gt;概述：当我使用 Winodws 的时候，我的工作开始变得容易；当我使用安卓的时候，一切都变得美好。&lt;/p&gt;
+&lt;p&gt;具体原因：&lt;/p&gt;
+&lt;h2&gt;一、Windows 相比 Mac 的好&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;更加直观和易用的操作系统。从窗口管理可以看出这一点，当你的任务很多时，我想没人会认为 Mac 的窗口交互更加高效吧。滑来滑去的，只是看起来高效，其实根本没做多少事情。&lt;/li&gt;
+&lt;li&gt;更好的浏览器。Mac 下的 Edge ，特别是 M1 芯片的 Edge ，确实不好用。但是 Windows 下的 Edge ，比 Mac 下的几乎所有浏览器，都好用。垂直标签页更高效、免费的 GPT-4 、里面的 Drop 可以方便和手机传文件；不仅支持分页显示，还有丰富的扩展、自带广告拦截。 是的，也许一开始有一些广告，但是设置后还是很干净。&lt;/li&gt;
+&lt;li&gt;更便宜的价格，当你需要大内存的时候，苹果的价格几乎是同类产品的 2~3 倍。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr /&gt;
-&lt;h3&gt;1. 安装（所有的 IDE 均通用，这里以 Pycharm 为例）&lt;/h3&gt;
-&lt;h4&gt;1.1 安装 WorkFlow&lt;/h4&gt;
-&lt;p&gt;从 &lt;a href="https://github.com/alfred-workflow-collections/jetbrains/releases" rel="nofollow"&gt;release&lt;/a&gt;下载最新的 workflow 文件，双击安装即可。&lt;/p&gt;
-&lt;h4&gt;1.2 配置 WorkFlow 环境变量&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;必须要改，因为家目录用简写方式&lt;code&gt;~&lt;/code&gt;不生效，要写绝对路径&lt;code&gt;/User/xxxx&lt;/code&gt;，可以使用以下命令得到家目录路径&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;echo $HOME
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;or&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;echo ~
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img alt="image:0" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/1.png" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image:2" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;变量说明&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;name&lt;/th&gt;
-&lt;th&gt;description&lt;/th&gt;
-&lt;th&gt;value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;PYCHARM_CONFIG_PATH&lt;/td&gt;
-&lt;td&gt;pycharm 的配置文件存放路径&lt;/td&gt;
-&lt;td&gt;/Users/ichen/Library/Application Support/JetBrains/PyCharm2023.2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PYCHARM_LAUNCHER_CMD&lt;/td&gt;
-&lt;td&gt;pycharm 二进制文件执行路径&lt;/td&gt;
-&lt;td&gt;/Applications/PyCharm.app/Contents/MacOS/pycharm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PYCHARM_RUN_PATH&lt;/td&gt;
-&lt;td&gt;pycharm 安装路径&lt;/td&gt;
-&lt;td&gt;/Applications/PyCharm.app/Contents/MacOS/pycharm&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;1.3 安装 recode 解决 xml 文件中文显示乱码问题&lt;/h4&gt;
-&lt;pre&gt;&lt;code class="language-shell"&gt;brew install recode
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2. 使用&lt;/h3&gt;
-&lt;h4&gt;2.1 打开历史项目&lt;/h4&gt;
-&lt;p&gt;在 Alfred 中输入&lt;code&gt;charm&lt;/code&gt;，选中项目名称，回车即可打开。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image:1" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/1.gif" /&gt;&lt;/p&gt;
-&lt;h4&gt;2.2 打开文件夹（类似于 windows 里的右键快捷打开）&lt;/h4&gt;
-&lt;p&gt;如果在当前 Finder 中没有选中具体文件夹，则会打开当前窗口所在的文件夹&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image:3" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/2.gif" /&gt;&lt;/p&gt;
-&lt;p&gt;如果在当前 Finder 中选中了具体文件夹，则会打开选中的文件夹&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image:4" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/3.gif" /&gt;&lt;/p&gt;
-&lt;h4&gt;2.3 打开文件&lt;/h4&gt;
-&lt;p&gt;和打开文件夹操作一样，如果你选中的是文件而不是文件夹，那么就会打开文件&lt;/p&gt;
-&lt;h3&gt;3. 说明&lt;/h3&gt;
-&lt;h4&gt;3.1 原理&lt;/h4&gt;
-&lt;p&gt;利用 IDE 自带的命令行工具加上特定参数和路径，可以打开 IDE 并打开指定的项目或文件夹。&lt;/p&gt;
-&lt;h4&gt;3.2 为什么要用 IDE 自带的命令行工具&lt;/h4&gt;
-&lt;p&gt;因为懒，每次打开项目需要先打开 IDE ，然后再打开项目，太麻烦了，所以就想着能不能直接打开项目，然后就找到了 IDE 自带的命令行工具，然后就有了这个 workflow 。&lt;/p&gt;
-&lt;h4&gt;3.3 static 文件夹里放了常用的 IDE 的图标可以直接拿去用&lt;/h4&gt;
-&lt;h3&gt;4. 其他项目怎么使用&lt;/h3&gt;
-&lt;p&gt;直接在 Alfred 的 workflow 中复制一份，然后修改环境变量即可，其他的不用改（还需要换个图标，图标在 static 文件夹里）。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="image:5" class="embedded_image" rel="noreferrer" src="https://github.com/alfred-workflow-collections/jetbrains/blob/main/static/3.png" /&gt;&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 07:14:19 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996867#reply0</guid></item><item><title>[杭州] 办理房贷需要同事或者朋友做证明人？</title><link>https://www.v2ex.com/t/996866#reply0</link><description>&lt;p&gt;背景：
-朋友为孩子改善换房，杭州摇号需要冻结资金，现在银行贷款流程走下来了，但是流水不过关，因此需要朋友或者同事证明贷款者本人无不良嗜好即可。&lt;/p&gt;
-&lt;p&gt;这个所谓的证明，说是一个口述证明，不需要承担责任。现在朋友问我是否可以帮忙，银行是浙商银行。&lt;/p&gt;
-&lt;p&gt;请问各位有没有人知道这个到底是什么情况？我之前理解贷款只需要抵押和担保人，这个证明人是什么鬼？另外，感觉和某种 AB 贷的套路很像啊，求解惑。&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 07:12:56 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996866#reply0</guid></item><item><title>[问与答] 请问 blogger 除了放 AdSense，还可以放别的广告联盟的广告吗？</title><link>https://www.v2ex.com/t/996864#reply0</link><description>如果可以，怎样将广告放到 blogger 的任意位置?布局里的添加小部件 HTML/Javascript 好像不行，放了广告不显示。</description><pubDate>Fri, 01 Dec 2023 07:11:49 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996864#reply0</guid></item><item><title>[分享发现] 看了个有意思的新闻 激光雷达打蚊子</title><link>https://www.v2ex.com/t/996863#reply0</link><description>&lt;p&gt;&lt;a href="https://www.163.com/v/video/VLJO16M3A.html" rel="nofollow"&gt;https://www.163.com/v/video/VLJO16M3A.html&lt;/a&gt;
-我对硬件和电磁波什么的不是很懂如果想攒一个类似的东西需要的门槛高么 感觉搞出来应该挺好玩&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 07:07:59 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996863#reply0</guid></item><item><title>[Apple] Apple One 美区超大杯拼车，半年付，一个车位</title><link>https://www.v2ex.com/t/996862#reply0</link><description>&lt;p&gt;如题，纯自用，已经稳定开车两年了，有车友跳车空出来一个车位。希望长期加入的欢迎联系。&lt;/p&gt;
-&lt;p&gt;Apple One 从这个月官方又涨价了，价格是 37.95 刀每个月 6 人均摊，按照实时汇率，不做中间商赚差价。仅 1 个车位，有意的加 wx （就是头像 ID ）联系。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" class="embedded_image" rel="noreferrer" src="https://ooo.0x0.ooo/2023/12/01/Or3d8t.jpg" /&gt;&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 07:06:46 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996862#reply0</guid></item><item><title>[问与答] 想买个 2000 以下的直屏手机，大家有没有推荐的</title><link>https://www.v2ex.com/t/996861#reply3</link><description>&lt;p&gt;需求
-2000 以下的直屏手机
-待机时间长
-对相机没要求&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:57:50 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996861#reply3</guid></item><item><title>[职场话题] 真有人包装简历，学历作假能正常入职？</title><link>https://www.v2ex.com/t/996858#reply5</link><description>&lt;p&gt;今天预定入职的测试，被人事发现学历造假，不给入职了，之前也试过一个前端也是入职前发现学历造假给退了。&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:51:41 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996858#reply5</guid></item><item><title>[Apple] macbook cpu m1 pro 台服英雄联盟流畅玩 无卡顿</title><link>https://www.v2ex.com/t/996857#reply3</link><description>帧数 300+  延迟 30ms  终于解决了偶尔的 LOL 需求</description><pubDate>Fri, 01 Dec 2023 06:48:28 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996857#reply3</guid></item><item><title>[宽带症候群] 想搞个专线玩一下，移动的也行.....</title><link>https://www.v2ex.com/t/996856#reply4</link><description>逛了一下 v 站，看到一些 v 友用着专线，有些地区价格感觉还可以。&lt;br /&gt;不知道杭州的价格是怎么样的，有过来人吗？</description><pubDate>Fri, 01 Dec 2023 06:44:32 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996856#reply4</guid></item><item><title>[酷工作] 开源项目，招聘 Next.js 远程实习（付费）</title><link>https://www.v2ex.com/t/996853#reply0</link><description>&lt;h1&gt;项目介绍&lt;/h1&gt;
-&lt;p&gt;我们是一家做开源的初创（避免广告嫌疑，公司网站在最后邮箱地址中），商业化方面主要面向海外。本项目是一个多月前开始启动，属于主项目的衍生项目&lt;/p&gt;
-&lt;h1&gt;项目地址&lt;/h1&gt;
+&lt;h3&gt;Mac 唯一的优点——好看&lt;/h3&gt;
+&lt;p&gt;但是随着苹果前设计师的离职，苹果的颜值也在下降。硬件上，刘海屏和厚重的机身便可以看到这一点。软件上，难道只有觉得 14 和 13 比 12 要丑吗？是的，它与 Iphone 更加统一，更没有 12 更加直观和好看。&lt;/p&gt;
+&lt;h3&gt;苹果的优点——稳定？&lt;/h3&gt;
+&lt;p&gt;我觉得不是苹果稳定，而是用户对苹果的包容度更大。相反，我觉得苹果更不稳定。大问题没有，小毛病不断。输入法卡顿、切换窗口乱跳、Icloud 抽风、Imessage 宕机……  &lt;/p&gt;
+&lt;h2&gt;二、安卓 VS 苹果&lt;/h2&gt;
+&lt;p&gt;説实话，除了隐私、交互和易用，苹果相较安卓几乎是没有任何优势。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;广告：是的，安卓有广告，但是广告可以关啊。相反，安卓还可以跳开屏广告。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;屏幕：是的，屏幕的显示更好。但是它的屏幕护眼吗？安卓我再不济，还有 LCD 。我想大部分人对屏幕都不是特别敏感，很快就可以适应。相反，就流畅而言，苹果还在一些机器上，把高刷给砍了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;hr /&gt;
+&lt;p&gt;不再有电池焦虑：安卓的电池更大，不再有电池焦虑；就算你没电了，吃个饭的时间就满了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不再有信号焦虑：这点用过苹果的都知道，尽管影响不是特别大，但还是有影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不再有骚扰电话和短信：之前我的苹果，每天至于 3 个骚扰电话打进来，还有各种垃圾短信。当使用安卓后，整个世界都清净了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自由：当你使用安卓的时候，你会感到自由。只要有安装包，就可以装，不用担心下架就装不了了。你想怎么折腾，就怎么折腾。这是你的手机，你可以把它改造成任何样子；而苹果是你得改造自己，去适应他们的产品。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、最后&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/nextrmm/nextrmm" rel="nofollow"&gt;主 Repo&lt;/a&gt;，&lt;code&gt;Next.js&lt;/code&gt; 全栈&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/snooowfire/ironhive" rel="nofollow"&gt;Agent&lt;/a&gt; ，是 &lt;code&gt;Rust&lt;/code&gt; 编写，本实习不要求 &lt;code&gt;Rust&lt;/code&gt; ，如果会当然更好&lt;/li&gt;
+&lt;li&gt;苹果和 Windows：苹果説，用户并不知道自己想什么。大部分人确实如此，但如果你知道要什么，那么苹果肯定不是一个好的选择。苹果的目标用户注定是少部分人：1 、作家； 2 、Code ，类 Unix 环境；（不过相较 Windows 现在没啥优势了） 3 、图像视频工作者； 4 、轻度使用者，只是看看电影啥的。 如果你需要生产力，那么你需要一台 Windows ，Mac 对大部分人而言，只是玩具。你不能因为它贵，就説它不是，它只是昂贵的玩具。&lt;/li&gt;
+&lt;li&gt;只有颜值：是的，如果你比较的话，Mac 只有这一个优点。不过随着 Mac 正在走实用主义的路线，这一优点可能会慢慢消失。它在颜值上开倒车，而 Windows 正迎头赶上。Mac 的刘海屏、丑陋的机身，以及最新的 MacOs 14 。而 Windows11 相较于 Win10 ，足以看出这一点。&lt;/li&gt;
+&lt;li&gt;隐私换便利：相较安卓而言，这几乎是 IOS 唯一的优势。我终于还是妥协了，因为我确实也没什么隐私可言。其实在另一方面，当大家都没有隐私的时候，隐私也不值钱了。这里我们説的隐私是什么？普通人的钱、或者干了什么蠢事，这其实在监控者的眼里，早就不是隐私了，他们已经习以为常了。当然还有政治相关的，我现在对政治不感兴趣。你可以説我们正受奴役，但是我们受的最大的奴役，也许正是我们自己。我们的头脑、情绪、想法…… 难受不是经常出来折腾自己吗？&lt;/li&gt;
+&lt;li&gt;苹果变了：v 站对苹果的呼声极高，过分认同苹果这个品牌，我很少看到可以理性讨论的。要么全盘否定，要么全盘否定。 我真的很希望苹果变得更好，但是他的表现另我失望。缺乏创新。他们曾经辉煌过，但他们已经很长时间没有再进步了。相反，他们似乎并不在意这点，他们只是在意今天又卖了多少钱。库克只是一个商人。他们宣扬傲慢，当用户提出需求的时候，他们説，你们用户并不需要懂这些，用户根本不知道自己想要什么，我们只考虑 80%用户的需求……  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;技术栈&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://create.t3.gg" rel="nofollow"&gt;create.t3.gg&lt;/a&gt;，&lt;code&gt;Prisma&lt;/code&gt; (&lt;code&gt;PostgreSQL&lt;/code&gt;) + &lt;code&gt;NextAuth&lt;/code&gt; + &lt;code&gt;tRPC&lt;/code&gt; + &lt;code&gt;Shadcn/ui&lt;/code&gt;&lt;/p&gt;
-&lt;h1&gt;要求&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;有过 &lt;code&gt;Next.js&lt;/code&gt; 经验或者相关经验，能够快速入手&lt;/li&gt;
-&lt;li&gt;对于开源有一定热情&lt;/li&gt;
-&lt;li&gt;学习/理解能力强&lt;/li&gt;
-&lt;li&gt;本科在读&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1&gt;待遇&lt;/h1&gt;
-&lt;p&gt;4000-6000 RMB / 月&lt;/p&gt;
-&lt;h1&gt;简历投递&lt;/h1&gt;
-&lt;p&gt;ICB6aG91QHJ1c3RkZXNrLmNvbQ==&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:37:15 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996853#reply0</guid></item><item><title>[杭州] 良渚有无老哥房出租啊</title><link>https://www.v2ex.com/t/996852#reply0</link><description></description><pubDate>Fri, 01 Dec 2023 06:36:59 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996852#reply0</guid></item><item><title>[互联网] cnBeta.com.tw 又跳转到 msn 了，有人能看懂是啥迷之操作吗？</title><link>https://www.v2ex.com/t/996851#reply3</link><description>&lt;p&gt;先是国内跳转今日头条，然后网站改版改得乱七八糟一塌糊涂，现在科学后打开这个网址又跳转 msn 资讯了，这到底是什么迷之操作？为啥不能好好做个网站，既然 &lt;a href="http://cnbeta.com" rel="nofollow"&gt;cnbeta.com&lt;/a&gt; 被封了，换 &lt;a href="http://cnbeta.com.tw" rel="nofollow"&gt;cnbeta.com.tw&lt;/a&gt; ，然后用国外服务器不就行了。&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:36:48 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996851#reply3</guid></item><item><title>[全球工单系统] 截止目前， 2023.12.01 14:33，阿里旗下的闲鱼崩溃</title><link>https://www.v2ex.com/t/996850#reply9</link><description>&lt;p&gt;闲鱼搜索，任何关键词都显示，搜索内容不存在。&lt;/p&gt;
-&lt;p&gt;阿里这是药丸？跟滴滴搁这崩溃竞赛呢？&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:35:29 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996850#reply9</guid></item><item><title>[问与答] 今年 iPhone 确实价格崩 我觉得挺好的 价格给我多降点</title><link>https://www.v2ex.com/t/996848#reply0</link><description>问大家一个问题 如果苹果手机价格和国内各大手机厂商的价格一样 就是配置相同 价格一样 你们买苹果还是买国内各大手机厂商手机</description><pubDate>Fri, 01 Dec 2023 06:25:55 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996848#reply0</guid></item><item><title>[MacBook] 咨询，大家 Macbook 是否存在长期使用后键盘手感变差的情况呢？</title><link>https://www.v2ex.com/t/996847#reply0</link><description>情况：M1 Macbook Air （ 2021 ），使用时间 2 年，目前发现部分键盘按键的手感不一致，返回没有段落感。弹性也不足。&lt;br /&gt;目前存在问题的按键：&lt;br /&gt;。/ {left}{down}{option(right)}</description><pubDate>Fri, 01 Dec 2023 06:25:48 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996847#reply0</guid></item><item><title>[分享发现] 技术小白的第一个出海工具</title><link>https://www.v2ex.com/t/996844#reply0</link><description>&lt;p&gt;昨天上线了我的第一个出海工具 &lt;/p&gt;
-&lt;p&gt;INVOICEgenerator.tools&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:20:22 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996844#reply0</guid></item><item><title>[问与答] apifox 网页版加个浏览器插件就可以实现跨域请求，浏览器插件里是怎么实现的呢？</title><link>https://www.v2ex.com/t/996843#reply2</link><description>&lt;p&gt;chrome 浏览器插件是怎么实现跨域转发的？有没有相关的 api 文档&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:20:14 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996843#reply2</guid></item><item><title>[程序员] 买了一个好玩的域名（niuma.dev），征集一些好玩的自建服务</title><link>https://www.v2ex.com/t/996842#reply3</link><description>&lt;p&gt;目前已经上线了一个 reference 镜像站 &lt;a href="https://ref.niuma.dev/" rel="nofollow"&gt;https://ref.niuma.dev/&lt;/a&gt; ，做了一点魔改，更清爽了。&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:19:46 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996842#reply3</guid></item><item><title>[Apple] 大家的 iPhone 15 系列循环多少次了</title><link>https://www.v2ex.com/t/996840#reply9</link><description>&lt;p&gt;我先来   10 月
-激活
-43 次&lt;/p&gt;</description><pubDate>Fri, 01 Dec 2023 06:17:29 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/996840#reply9</guid></item></channel></rss>
+&lt;hr /&gt;
+&lt;p&gt;我正在使用苹果，我没有贬低它的意思。就像之前看到的一段话，如果你真的爱苹果，你应该给它一记耳光，让它做出改变。而不是説，苹果的一切都很好，Windows 没有口味。Win11 之前把任务栏改了，一堆人骂，然后现在回来了。苹果也需要这样，不喜欢就要説出来，苹果只是一个产品。 苹果这么多年没有几乎没有进步，有多少是果粉的功劳。如果大家都説，我需要一侧滑返回，那么这个东西早出来了。&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 04:21:55 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997060#reply0</guid></item><item><title>[分享发现] 那个后端干了前端活儿的项目，发布到生产环境了</title><link>https://www.v2ex.com/t/997058#reply2</link><description>&lt;p&gt;&lt;img alt="front" class="embedded_image" rel="noreferrer" src="https://i.imgur.com/vcSeElI.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="left laterial" class="embedded_image" rel="noreferrer" src="https://i.imgur.com/qWRy97s.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="left rear" class="embedded_image" rel="noreferrer" src="https://i.imgur.com/9io7AJ1.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="right rear" class="embedded_image" rel="noreferrer" src="https://i.imgur.com/CZUNpVB.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="right buttom rear" class="embedded_image" rel="noreferrer" src="https://i.imgur.com/vfsyFov.jpg" /&gt;&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 04:10:58 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997058#reply2</guid></item><item><title>[程序员] 开发用词强迫症？</title><link>https://www.v2ex.com/t/997057#reply1</link><description>&lt;p&gt;在编写代码时，我总是特别注重选择恰当的术语（变量、方法、类名等），这种习惯让我形成了一种追求精准度的“强迫症”。多年来，我积累了一个相当丰富的专业词库，您可以在这里查看：&lt;a href="https://github.com/wenerme/wener/blob/master/notes/dev/dict.md" rel="nofollow"&gt;我的开发词库&lt;/a&gt; &lt;a href="https://wener.me/notes/dev/dict" rel="nofollow"&gt;https://wener.me/notes/dev/dict&lt;/a&gt; 。我很好奇，是否还有其他开发者也有类似的经历和兴趣？我想知道大家是如何处理这种对精确用词的追求的。&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 04:06:05 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997057#reply1</guid></item><item><title>[MacBook Pro] 有最近打算入手 MacBook 的朋友， 3%面额价求帮忙开一张发票（纸质电子都可以）</title><link>https://www.v2ex.com/t/997056#reply0</link><description></description><pubDate>Sat, 02 Dec 2023 03:58:24 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997056#reply0</guid></item><item><title>[分享创造] 向无 AI 知识背景的读者介绍生成式 AI 是如何工作的</title><link>https://www.v2ex.com/t/997055#reply0</link><description>视频链接：&lt;br /&gt;&lt;a href="https://www.bilibili.com/video/BV1vN4y1Y7u3/" rel="nofollow noopener" target="_blank"&gt;https://www.bilibili.com/video/BV1vN4y1Y7u3/&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;网页图文版：&lt;br /&gt;&lt;a href="https://step-saga-examples.pages.dev/simple-ai-01-cn/" rel="nofollow noopener" target="_blank"&gt;https://step-saga-examples.pages.dev/simple-ai-01-cn/&lt;/a&gt;</description><pubDate>Sat, 02 Dec 2023 03:53:54 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997055#reply0</guid></item><item><title>[程序员] 有没有公众号或者网站提供微信代发通知的？</title><link>https://www.v2ex.com/t/997054#reply2</link><description>&lt;p&gt;类似于我订阅他的公众号，给我个接口，我调用接口发通知到这个公众号给我&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 03:51:10 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997054#reply2</guid></item><item><title>[程序员] .ing 后缀正式开放了，有没有什么想法</title><link>https://www.v2ex.com/t/997053#reply10</link><description>&lt;p&gt;今天早上注册了一个 blaz.ing 准备做个项目&lt;/p&gt;
+&lt;p&gt;.ing 属于谷歌域名注册局，目前还处于域名优先注册期，钱给够就可以提前注册&lt;/p&gt;
+&lt;p&gt;正常开放时间为北京时间 12 月 6 号凌晨零点&lt;/p&gt;
+&lt;p&gt;edit.ing sign.ing 已经被 adobe 启用&lt;/p&gt;
+&lt;p&gt;有想法的程序员朋友可以去 &lt;a href="http://name.com" rel="nofollow"&gt;name.com&lt;/a&gt; 注册 .ing&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 03:39:23 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997053#reply10</guid></item><item><title>[问与答] 关于路由器的安装位置</title><link>https://www.v2ex.com/t/997052#reply0</link><description>&lt;p&gt;新家最近在装修，考虑到 Wi-Fi 的全屋覆盖和智能家居设备（小米）。目前有两套方案。&lt;/p&gt;
+&lt;p&gt;1.全屋用锐捷的 acap 方案，ac 位置放在房子正中心，ap 采用吸顶式，放在房子四个角（但不是最边缘）基本可以覆盖整个屋子（角落型号差就加个 ap 面板）。吸顶 ap 全部放进空调的回风口。（不是出风口！） 然后里面还得放置小米的中枢网关。（据说中枢网关和 ap 会有 2.4g 信号干扰，不能放太近）&lt;/p&gt;
+&lt;p&gt;2.目前小米新出了 6500pro 的路由器，并且自带中枢网关功能。打算买四台也是放四个角落，这样 ac 的位置就可以用一台软路由+多口交换机就解决了。这个方案目前省去了买小米中枢设备的费用，差不多近 1k 多。&lt;/p&gt;
+&lt;p&gt;担心的点是路由器塞进空调回风口后（空调回风口挺大的，路由器可以竖着放置），会有什么问题？可能不太方便后期检修。&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 03:36:54 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997052#reply0</guid></item><item><title>[问与答] 对于 Go 切片有点疑问？</title><link>https://www.v2ex.com/t/997051#reply4</link><description>&lt;p&gt;为什么切片的左边可以是数组的长度，按照道理来说应该越界了呀？&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-go"&gt;package main
+
+import "fmt"
+
+func main() {
+	var s = "whaomi"
+	var bs = []byte(s)
+	fmt.Println(bs[len(s):])
+
+	// error
+	// fmt.Println(bs[len(s)+1:])
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数组长度是 6 ，按照 0 下标开始最后一位应该是 5 ，但是却可以使用切片从 6 开始 &lt;code&gt;bs[len(s):]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://go.dev/play/p/f2a1rZgzTlo" rel="nofollow"&gt;Code&lt;/a&gt;&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 03:20:26 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997051#reply4</guid></item><item><title>[宽带症候群] 听说江西移动 ipv6 全关了？</title><link>https://www.v2ex.com/t/997050#reply6</link><description>楼主坐标江西宜春，从前两天重启一次光猫后就彻底获取不到 ipv6 了。&lt;br /&gt;&lt;br /&gt;       不论是光猫拨号，或者桥接，都只有 ipv6 ，狗移动不给公网 v4 就算了，公网 v6 也给停了</description><pubDate>Sat, 02 Dec 2023 03:16:36 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997050#reply6</guid></item><item><title>[MacBook Pro] 香港修 苹果电脑是不是不用 原始购买凭证？</title><link>https://www.v2ex.com/t/997048#reply1</link><description>去厦门直营店 对方门店经理跟我说 电脑 ac 要有购买凭证才给修 以前我记得都不要</description><pubDate>Sat, 02 Dec 2023 03:06:36 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997048#reply1</guid></item><item><title>[问与答] 普通人花多少钱能享受类似血槽姐的紧急医疗待遇？</title><link>https://www.v2ex.com/t/997047#reply28</link><description>- 输血 7000ml ，每人 300ml ，至少 24 人，要多少钱才能让这些人愿意献血？并且说服医院去帮你协调？假设为 100 万；&lt;br /&gt;- 医疗包机，推测血槽姐拉萨到成都使用“海南经纬航空医疗急救站”花了 100 万；&lt;br /&gt;- 华西医院抢救：10 万&lt;br /&gt;&lt;br /&gt;所以 220 万就能极大提高一个人在危重情况的生存概率？并且大部分人不用从拉萨这样的偏远地区包机到成都，使用救护车就行，110 万就行。&lt;br /&gt;相比于 30 年房贷，我觉得太便宜了。程序员中位数年薪 15 万，那么 15 年就能偿还 220 万，8 年偿还 110 万，有相关保险还能更便宜。&lt;br /&gt;是否有相关的境内外保险，在发生意外情况时，能够由保险公司出资并协调？</description><pubDate>Sat, 02 Dec 2023 03:05:16 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997047#reply28</guid></item><item><title>[问与答] 你们 Java 在深圳多少 k 啊</title><link>https://www.v2ex.com/t/997044#reply6</link><description>&lt;p&gt;三年，我从 3k-8k-9k-11k-12k,一直没跳过槽，因为看到很多说找工作难得帖子，所以就在这家公司一直躺平，从没加过班，但是大小周朝九晚六。一眼望到头的生活，JAVA 什么时候这么卷了，是否要考虑其他行业？&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 02:38:50 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997044#reply6</guid></item><item><title>[程序员] 打败你的可能是 chatgpt. 我的新的想法。插件版 英语轻松读</title><link>https://www.v2ex.com/t/997043#reply3</link><description>&lt;p&gt;以前想到一个语境词典， 然后有大佬在 openai translator 中实现了。
+语境词典的原贴在这里
+&lt;a href="https://www.v2ex.com/t/919114" rel="nofollow"&gt;https://www.v2ex.com/t/919114&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;贴一下这个贴子的目的是用来证明自己的想法不是意想天开。 &lt;/p&gt;
+&lt;p&gt;这几天刷到 tinyfool 的英语轻松读。他做了客户端，服务端。代码量太多了，还只支持 ios 。 而且当一个单词有多种意思的时候，他还做不到选择一个最准确的意思。 &lt;/p&gt;
+&lt;p&gt;然后我脑袋瓜子一激灵。 为什么不做一个类似于沉浸式翻译的 chrome 插件呢， 这样子， 打开网页就能用了,全平台支持。&lt;/p&gt;
+&lt;p&gt;我把 prompt 写好了， 不过我不会写 chrome 插件，我只会出主意。 我还有一大堆主意。 哪位大神愿意去实现在这个贴子里跟一下贴，谢谢。&lt;/p&gt;
+&lt;p&gt;你是一位英语老师，你将帮助我加速阅读，为了加速我的阅读，减少查字典的时间， 请将我给你的英语中词频大于 3000 的单词的意思标注在返回英文原文的生词，比如 我给你的英语句子是
+On the whole, Harry thought he was to be congratulated on his idea of hiding here.
+你的回答将是：
+On the whole, Harry thought he was to be congratulated(祝贺) on his idea of hiding here.
+请记住一定要原文全部输出。 不只是输出单词和解释&lt;/p&gt;
+&lt;p&gt;试了一下
+问 gpt:
+Few ideas are more unshakable than the notion that the rich keep getting richer while ordinary folks fall ever further behind. The belief that capitalism is rigged to benefit the wealthy and punish the workers has shaped how millions view the world, whom they vote for and whom they shake their fists at. It has been a spur to political projects on both left and right, from the interventionism of Joe Biden to the populism of Donald Trump. But is it true?&lt;/p&gt;
+&lt;p&gt;Even as the suspicion of free markets has hardened, evidence for the argument that inequality is rising in the rich world has become flimsier. Wage gaps are shrinking. Since 2016 real weekly earnings for those at the bottom of America’s pay distribution have grown faster than those at the top. Since the covid-19 pandemic this wage compression has gone into overdrive; according to one estimate, it has been enough to reverse an extraordinary 40% of the pre-tax wage inequality that emerged during the previous 40 years. A blue-collar bonanza is under way.
+gpt 问答：
+Few ideas are more unshakable than the notion that the rich keep getting richer while ordinary folks fall ever further behind. The belief that capitalism is rigged to benefit(受益) the wealthy and punish the workers has shaped how millions view the world, whom they vote for and whom they shake their fists at. It has been a spur(刺激) to political projects on both left and right, from the interventionism(干涉主义) of Joe Biden to the populism(民粹主义) of Donald Trump. But is it true?&lt;/p&gt;
+&lt;p&gt;Even as the suspicion of free markets has hardened, evidence for the argument that inequality is rising in the rich world has become flimsier(不牢固的). Wage gaps are shrinking. Since 2016 real weekly earnings for those at the bottom of America’s pay distribution have grown faster than those at the top. Since the covid-19 pandemic this wage compression has gone into overdrive; according to one estimate, it has been enough to reverse an extraordinary 40% of the pre-tax wage inequality that emerged during the previous 40 years. A blue-collar bonanza(繁荣) is under way.&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 02:33:21 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997043#reply3</guid></item><item><title>[问与答] 有人做过视频会员 游戏充值 吗</title><link>https://www.v2ex.com/t/997042#reply0</link><description>有啥经验，随便说说</description><pubDate>Sat, 02 Dec 2023 02:29:10 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997042#reply0</guid></item><item><title>[问与答] 亚马逊私人开发者怎么获取 PII 权限呢？</title><link>https://www.v2ex.com/t/997041#reply0</link><description>&lt;p&gt;注册的私人开发者，只需要自己账号下的 PII 权限就行了，没看到有说明可以获取的，有老铁指导下吗&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 02:21:22 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997041#reply0</guid></item><item><title>[长沙] 网安行业，准备从深圳回长沙，工作好找吗？</title><link>https://www.v2ex.com/t/997040#reply2</link><description></description><pubDate>Sat, 02 Dec 2023 02:21:11 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997040#reply2</guid></item><item><title>[生活] 如果把人生比作是一场德州扑克，你会在什么时候 All In 呢？</title><link>https://www.v2ex.com/t/997039#reply11</link><description>&lt;ul&gt;
+&lt;li&gt;又会在什么时候弃牌呢？&lt;/li&gt;
+&lt;/ul&gt;</description><pubDate>Sat, 02 Dec 2023 02:18:58 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997039#reply11</guid></item><item><title>[程序员] [智能家居篇一] 之小米 IoT 协议 &amp; 命令行与源码阅读等 - EP 17</title><link>https://www.v2ex.com/t/997038#reply0</link><description>&lt;p&gt;&lt;a href="https://www.bilibili.com/video/BV1ZQ4y1G7S6" rel="nofollow"&gt;https://www.bilibili.com/video/BV1ZQ4y1G7S6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=NUEq9DOvq88" rel="nofollow"&gt;https://www.youtube.com/watch?v=NUEq9DOvq88&lt;/a&gt;&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 02:18:51 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997038#reply0</guid></item><item><title>[分享创造] 纯小白靠 AI 糊的一个 SVD 在线体验网站</title><link>https://www.v2ex.com/t/997036#reply0</link><description>&lt;p&gt;0 基础只懂母语的小白，靠 AI 花了 1 天时间做的一个在线体验 SVD 的站点：&lt;a href="http://stablevideodiffusion.cc" rel="nofollow"&gt;stablevideodiffusion.cc&lt;/a&gt; 欢迎各位大佬体验指教&lt;/p&gt;</description><pubDate>Sat, 02 Dec 2023 02:14:35 GMT</pubDate><guid isPermaLink="true">https://www.v2ex.com/t/997036#reply0</guid></item></channel></rss>
