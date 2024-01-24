@@ -22,4 +22,3 @@ next find the translated link in [https://talengu.github.io/rss-translate/](http
 ## rss translate links
 
  - source011 [https://rsshub.app/economist/china](https://rsshub.app/economist/china) -> [economist_chn_rss.xml](rss/economist_chn_rss.xml)
- - source012 [https://rsshub.app/scmp/4](https://rsshub.app/scmp/4) -> [scmp_chn_rss.xml](rss/scmp_chn_rss.xml)
